@@ -14,6 +14,7 @@ import {
   giphysSearching,
   giphysNoSearch,
 } from "@/lib/post/consts";
+import { EventTracker } from "@/eventTracker";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -99,6 +100,7 @@ export default function Home() {
 
     setIsLoading(true);
     try {
+      EventTracker.track("search", { query: debouncedQuery });
       const response = await axios.get("/api/posts/search", {
         params: { query: debouncedQuery },
       });
