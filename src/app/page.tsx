@@ -13,7 +13,7 @@ import {
   giphysNotFound,
   giphysSearching,
   giphysNoSearch,
-} from "@/lib/ai/consts";
+} from "@/lib/post/consts";
 
 export default function Home() {
   const [query, setQuery] = useState("");

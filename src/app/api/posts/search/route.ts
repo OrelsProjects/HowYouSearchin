@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 
-import { searchPosts } from "@/app/actions";
+import { searchPosts } from "@/lib/post/utils/utils";
 import { NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
