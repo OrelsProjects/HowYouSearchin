@@ -1,0 +1,2 @@
+1. Change supabase to be in paris - Where my target audience is
+2. Run the openai requests in a batch to save 50% of the cost
