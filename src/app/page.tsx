@@ -127,7 +127,7 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-gray-600 dark:text-gray-300">
-            Search through the best quotes from the <strong>friends</strong>{" "}
+            Search through the best quotes from the <strong>Friends</strong>{" "}
             show
           </p>
         </motion.div>
