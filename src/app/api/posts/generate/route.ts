@@ -18,7 +18,7 @@ const getRandomTimestamp = (): string => {
 };
 
 // Function to generate 1000 random Twitter posts
-export const generateRandomTwitterPosts = (): Post[] => {
+const generateRandomTwitterPosts = (): Post[] => {
   const posts: Post[] = [];
 
   for (let i = 0; i < 100; i++) {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ClientTrackersProvider from "@/app/providers/ClientTrackersProvider";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -62,6 +63,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <ClientTrackersProvider />
       <body className={`antialiased`}>{children}</body>
     </html>
   );
