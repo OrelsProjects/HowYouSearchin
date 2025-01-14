@@ -37,7 +37,7 @@ const generateRandomTwitterPosts = (): Post[] => {
   return posts;
 };
 
-export async function insertPostsToSupabase(posts: Post[]) {
+async function insertPostsToSupabase(posts: Post[]) {
   let i = 0;
   for (const post of posts) {
     console.log(`Inserting post ${i++} of ${posts.length}`);
