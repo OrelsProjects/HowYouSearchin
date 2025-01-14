@@ -43,7 +43,7 @@ export async function insertPostsToSupabase(posts: Post[]) {
     try {
       // Generate embedding for the content
       const embedding = await generateEmbedding(
-        `${post.user}: ${post.content}`
+        `${post.user.toUpperCase()}!!!: ${post.content}`
       );
 
       // Insert into Supabase

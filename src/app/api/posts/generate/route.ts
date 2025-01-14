@@ -8,3 +8,8 @@ export async function POST() {
   return NextResponse.json({ message: "Posts inserted" });
 }
 
+export async function GET() {
+  const posts = generateRandomTwitterPosts();
+  await insertPostsToSupabase(posts);
+  return NextResponse.json({ message: "Posts inserted" });
+}
