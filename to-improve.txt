@@ -7,3 +7,4 @@
 7. Add pagination to the search results
 8. Add filters/sorting options
 10. Make the code more robust, with better error handling and logging
+11. Remove duplicates from the search results

@@ -1,6 +1,7 @@
 import { supabase } from "@/lib/supabase";
 import { embed } from "ai";
 import { openai } from "@ai-sdk/openai";
+import { Post } from "@/lib/model/post";
 
 export async function generateEmbedding(text: string) {
   const { embedding } = await embed({
@@ -22,5 +23,11 @@ export async function searchPosts(query: string) {
 
   if (error) throw error;
 
-  return data;
+  // remove duplicates
+  const dataNoDuplicates = data.filter(
+    (post: Post, index: number, self: Post[]) =>
+      index === self.findIndex((t) => t.content === post.content)
+  );
+
+  return dataNoDuplicates;
 }

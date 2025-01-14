@@ -77,12 +77,12 @@ export default function Home() {
 
   const fetchRandomGif = (type: "searching" | "notFound" | "noSearch") => {
     try {
-      const giphysPool =
-        type === "notFound"
-          ? giphysNotFound
-          : type === "searching"
-          ? giphysSearching
-          : giphysNoSearch;
+      if (type === "searching") {
+        setRandomGif("");
+        setExplanation("");
+        return;
+      }
+      const giphysPool = type === "notFound" ? giphysNotFound : giphysNoSearch;
       const poolLength = Object.keys(giphysPool).length;
       let randomIndex = Math.floor(Math.random() * poolLength);
       randomIndex = randomIndex % poolLength;
@@ -127,7 +127,8 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-gray-600 dark:text-gray-300">
-            Search through the best quotes from the <strong>friends</strong>
+            Search through the best quotes from the <strong>friends</strong>{" "}
+            show
           </p>
         </motion.div>
 
