@@ -4,3 +4,5 @@
 4. Maybe cache results of search repeated queries (?)
 5. Giphy search - In the backend
 6. I would add more search points (For a real x post), like retweets, replies, hastags, likes (Names of likers, perhaps. Might be very heavy to search like this), comments
+7. Add pagination to the search results
+8. Add filters/sorting options
