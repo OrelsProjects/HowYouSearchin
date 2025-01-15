@@ -114,8 +114,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/15 to-primary/10">
-      <main className="container mx-auto px-4 py-12 max-w-4xl flex flex-col items-center justify-center">
+    <div className="min-h-screen">
+      <main className="container mx-auto px-4 py-12 pt-6 max-w-4xl flex flex-col items-center justify-start">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ export default function Home() {
               >
                 {randomGif && (
                   <img
-                    src={randomGif}
+                    src={randomGif || "/placeholder.svg"}
                     alt="Searching"
                     className="rounded-lg mb-4"
                   />
@@ -232,7 +232,7 @@ export default function Home() {
             >
               {randomGif && (
                 <img
-                  src={randomGif}
+                  src={randomGif || "/placeholder.svg"}
                   alt="Not Found"
                   className="rounded-lg mb-4"
                 />

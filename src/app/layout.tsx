@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientTrackersProvider from "@/app/providers/ClientTrackersProvider";
+import { Header } from "@/components/header";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -64,7 +65,12 @@ export default function Layout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <ClientTrackersProvider />
-      <body className={`antialiased`}>{children}</body>
+      <body
+        className={`antialiased  bg-gradient-to-br from-primary/15 to-primary/10`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
